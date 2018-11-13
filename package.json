@@ -1,0 +1,26 @@
+{
+  "name": "szablony_html",
+  "version": "1.0.0",
+  "description": "Przykładowy szkielet aplikacji HTML",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Piotr Muszkiewcz rFront",
+  "license": "ISC",
+  "devDependencies": {
+    "async": "^2.6.0",
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-iconfont": "^9.1.0",
+    "gulp-include": "^2.3.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "html5shiv": "^3.7.3",
+    "owl.carousel": "^2.2.0"
+  }
+}
