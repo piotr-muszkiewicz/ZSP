@@ -1,0 +1,55 @@
+.partners {
+  float: left;
+  width: 100%;
+  padding: 51px 0 0 0;
+  @include breakpoint(mobile) {
+    padding: 30px 0 0 0;
+  }
+  &__title {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 50px 0;
+    text-align: center;
+    @include breakpoint(mobile) {
+      font-size: 26px;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__item {
+    width: 20%;
+    text-align: center;
+    margin-bottom: 43px;
+    @include breakpoint(tablet) {
+      width: 33%;
+    }
+    @include breakpoint(mobile) {
+      width: 50%;
+      padding: 0 10px;
+    }
+    img {
+      filter: url('../js/filters.svg#grayscale'); /* Firefox 3.5+ */
+      filter: gray; /* IE6-9 */
+      -webkit-filter: grayscale(1); /* Webkit Nightlies, Google Chrome Canary and Microsoft Edge*/
+      opacity: 0.6;
+      max-width: 100%;
+    }
+    &:hover {
+      img {
+        filter: none; /* Applies to FF + IE */
+        -webkit-filter: grayscale(0);
+        opacity: 1;
+      }
+    }
+  }
+  &__group {
+    padding-bottom: 12px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}

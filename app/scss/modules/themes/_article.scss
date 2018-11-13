@@ -1,0 +1,251 @@
+.article-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  @include breakpoint(mobile) {
+    padding-top: 30px;
+  }
+  time {
+    font-size: 13px;
+    color: #787878;
+  }
+  .fb-share {
+    color: $green;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 2px solid $green;
+    text-decoration: none;
+    clear: both;
+    padding-bottom: 3px;
+    &:hover {
+      color: $greendark;
+      border-color: $greendark;
+    }
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 15px 0 15px 0;
+    font-weight: 500;
+    width: 100%;
+    @include breakpoint(mobile) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  p {
+    margin: 0 0 0 0;
+    font-size: 18px;
+    line-height: 24px;
+    @include breakpoint(mobile) {
+      font-size: 16px;
+    }
+  }
+}
+
+.similar-article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__title {
+    font-size: 24px;
+    line-height: 30px;
+    width: 100%;
+  }
+  &__item {
+    width: 270/870*100%;
+    @media all and (max-width: 600px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .news-thumb {
+      &__right {
+        clear: both;
+        padding-top: 15px;
+      }
+      &__title {
+        margin-top: 7px;
+      }
+      &__img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.text-page {
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 25px 0;
+    a {
+      color: $green;
+      text-decoration: none;
+      &:hover {
+        color: $greendark;
+      }
+    }
+  }
+  ul:not(.file-list) {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      position: relative;
+      font-size: 14px;
+      line-height: 24px;
+      padding-left: 70px;
+      @include breakpoint(mobile) {
+        padding-left: 30px;
+      }
+      &:after {
+        color: $green;
+        font-family: "FontAwesome", sans-serif;
+        position: absolute;
+        left: 50px;
+        top: 0;
+        content: "\f105 ";
+        @include breakpoint(mobile) {
+          left: 10px;
+        }
+      }
+      a {
+        color: $green;
+        text-decoration: none;
+        &:hover {
+          color: $greendark;
+        }
+      }
+    }
+  }
+  ol {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  blockquote {
+    margin: 25px 40px;
+    background: #f7f7f7;
+    padding: 30px;
+    font-size: 18px;
+    line-height: 24px;
+    font-style: italic;
+    color: #2a2a2a;
+    @include breakpoint(mobile) {
+      margin: 25px 0;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 15px;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+  }
+  h1 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  h3 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  h5 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  img.alignright {float:right; margin:0 0 1em 1em}
+  img.alignleft {float:left; margin:0 1em 1em 0}
+  img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+  a img.alignright {float:right; margin:0 0 1em 1em}
+  a img.alignleft {float:left; margin:0 1em 1em 0}
+  a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+  hr {
+    border: 0;
+    border-bottom: 1px solid #dfdfdf;
+    margin: 40px 0;
+  }
+  .video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .entry-title {
+    a {
+      text-decoration: none;
+      color: black;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+  .hentry {
+    border-bottom: 1px solid darkgray;
+  }
+}
+
+.file-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin-bottom: 9px;
+    a {
+      font-size: 16px;
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 16px 22px;
+      background: #f7f7f7;
+      display: block;
+      position: relative;
+      .fa-download {
+        position: absolute;
+        right: 22px;
+        top: 18px;
+        color: $green;
+      }
+    }
+  }
+}
+
+.col3 {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  .col {
+    width: 33%;
+    text-align: center;
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+    span {
+      font-weight: bold;
+      display: block;
+      margin: 15px;
+    }
+  }
+}

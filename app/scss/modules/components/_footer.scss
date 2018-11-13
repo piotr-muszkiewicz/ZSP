@@ -1,0 +1,136 @@
+.footer {
+  background: #f7f7f7;
+  overflow: hidden;
+  float: left;
+  width: 100%;
+  padding: 66px 0 40px 0;
+  margin-top: 55px;
+  @include breakpoint(mobile) {
+    padding: 30px 0;
+  }
+  &__title {
+    margin: 0 0 18px 0;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &__text {
+    padding-top: 10px;
+    img {
+      width: 105px;
+      margin-right: 32px;
+      float: left;
+      @include breakpoint(mobile) {
+        display: block;
+        float: none !important;
+        margin: 0 auto 30px auto!important;
+      }
+    }
+    &-desc {
+      overflow: hidden;
+      p {
+        margin: 0 0 14px 0;
+        line-height: 18px;
+        @include breakpoint(mobile) {
+          font-size: 14px;
+        }
+        a {
+          text-decoration: none;
+          color: $green;
+          &:hover {
+            color: $greendark;
+          }
+        }
+      }
+    }
+  }
+  ul {
+    margin: 0 0 38px 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    li {
+      a {
+        font-size: 14px;
+        display: block;
+        margin: 0 0 10px 0;
+        color: #000;
+        text-decoration: none;
+        &:hover {
+          color: $greendark;
+        }
+      }
+    }
+  }
+  .col1,.col2,.col3,.col4,.col5 {
+    float: left;
+    padding-right: 15px;
+    @include breakpoint(mobile) {
+      width: 100% !important;
+      text-align: center !important;
+      padding: 0 !important;
+    }
+  }
+  .col1 {
+    width: 430/1170*100%;
+    @include breakpoint(tablet) {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+  .col2 {
+    width: 270/1170*100%;
+    @include breakpoint(tablet) {
+      width: 33%;
+    }
+  }
+  .col3 {
+    width: 270/1170*100%;
+    @include breakpoint(tablet) {
+      width: 33%;
+    }
+  }
+  .col4 {
+    float: right;
+    width: 200/1170*100%;
+    @include breakpoint(tablet) {
+      width: 33%;
+    }
+  }
+}
+
+.copyright {
+  float: left;
+  width: 100%;
+  font-size: 13px;
+  color: #2a2a2a;
+  padding: 24px 0;
+  @include breakpoint(mobile) {
+    text-align: center;
+  }
+  a {
+    margin-left: 30px;
+    color: #2a2a2a;
+    text-decoration: none;
+    @include breakpoint(mobile) {
+      display: block;
+      text-align: center;
+      margin: 0;
+    }
+    &:hover {
+      color: $greendark;
+    }
+  }
+  .left {
+    float: left;
+    @include breakpoint(mobile) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  .right {
+    float: right;
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+}

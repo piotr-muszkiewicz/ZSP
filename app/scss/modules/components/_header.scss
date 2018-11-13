@@ -1,0 +1,399 @@
+.search {
+  margin-top: -71px;
+  transition: all 0.3s;
+  opacity: 0;
+  &.open {
+    opacity: 1;
+    margin-top: 0;
+  }
+  &__bg {
+    max-width: 1470px;
+    margin: 0 auto;
+    background: #f6f6f6;
+    padding: 15px 0;
+    input {
+      border: none;
+      border-bottom: 1px solid #d3d3d3;
+      background: none;
+      font-size: 16px;
+      padding: 10px 0 10px 43px;
+      width: calc(100% - 50px);
+    }
+    form {
+      position: relative;
+    }
+    button {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $green;
+      background: none;
+      border: 0;
+      &:hover {
+        color: $greendark;
+      }
+    }
+    .clear {
+      float: right;
+      color: $green;
+      margin: 10px 9px 0 0;
+      &:hover {
+        color: $greendark;
+      }
+    }
+  }
+}
+.header {
+  padding: 26px 0 0 0;
+  position: relative;
+  z-index: 50;
+  @include breakpoint(tablet) {
+    padding: 20px 0 0 0;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 65px;
+  }
+  .menu-toggle {
+    margin: 10px 0 0 5px;
+    @include breakpoint(mobile) {
+      width: 40px;
+      height: 40px;
+      background: $green;
+      display: inline-block;
+      vertical-align: top;
+      margin: 10px 0 0 5px;
+      cursor: pointer;
+      position: absolute;
+      right: 15px;
+      top: 71px;
+      border: 1px solid transparent;
+      &:hover {
+        border: 1px solid $green;
+        background: #FFF;
+        span {
+          background: $green;
+        }
+      }
+      span {
+        background: #FFF;
+        width: 26px;
+        height: 4px;
+        display: block;
+        position: absolute;
+        left: 6px;
+        transition: all 0.3s;
+        &:nth-child(1) {
+          top: 8px;
+        }
+        &:nth-child(2) {
+          top:17px;
+        }
+        &:nth-child(3) {
+          top: 26px;
+        }
+      }
+      &.open {
+        span {
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(1) {
+            transform: rotate(45deg);
+            transform-origin: 3px 7px;
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+            transform-origin: 1px -3px;
+          }
+        }
+      }
+    }
+  }
+  .back-menu {
+    display: none;
+    @include breakpoint(tablet) {
+      display: block;
+      font-weight: 500;
+      color: #000000;
+      text-decoration: none;
+      padding: 12px 28px 11px 60px;
+      border-bottom: 1px solid rgba(0,0,0,.15);
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      z-index: 101;
+      background: #FFF;
+      .fa {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 44px;
+        text-align: center;
+        line-height: 44px;
+        color: #a8a8a8;
+        cursor: pointer;
+        border-right: 1px solid rgba(0,0,0,.15);
+      }
+    }
+  }
+  .logo {
+    width: 105px;
+    display: block;
+    @include breakpoint(tablet) {
+      width: 90px;
+      padding-bottom: 20px;
+    }
+    @include breakpoint(mobile) {
+      width: 70px;
+      padding-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+      image-rendering: crisp-edges;
+    }
+  }
+  &__left {
+    float: left;
+  }
+  &__right {
+    float: right;
+    @include breakpoint(tablet) {
+      margin-top: 14px;
+    }
+  }
+  .facebook,
+  .librus {
+    background: $green;
+    color: #FFF;
+    padding: 0 10px;
+    height: 39px;
+    min-width: 39px;
+    text-align: center;
+    line-height: 39px;
+    &:hover {
+      background: #FFF;
+      color: $green;
+    }
+  }
+  .librus {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    float: right;
+    padding-top: 10px;
+    @include breakpoint(mobile) {
+      padding-right: 55px;
+      padding-top: 3px;
+    }
+    .info {
+      font-size: 15px;
+      margin-right: 10px;
+      @include breakpoint(mobile) {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: #f7f7f7;
+        font-size: 12px;
+        line-height: 18px;
+        padding: 5px 15px;
+        margin-right: 0;
+        br {
+          display: none;
+        }
+      }
+      a {
+        color: #787878 !important;
+        text-decoration: none;
+        font-size: 14px;
+        margin: 0;
+        &:hover {
+          color: $greendark !important;
+        }
+      }
+    }
+    a {
+      margin: 0 0 0 20px;
+      color: #89cc2c;
+      text-decoration: navajowhite;
+      font-size: 18px;
+      @include breakpoint(mobile) {
+        margin-left: 15px;
+      }
+      &.link {
+       text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 2px solid $green;
+        font-size: 13px;
+        padding-bottom: 3px;
+        &:hover {
+          border-bottom-color: $greendark;
+        }
+      }
+      &:hover {
+        color: $greendark;
+      }
+    }
+  }
+  &__nav {
+    float: right;
+    margin: 32px 5px 0 0;
+    clear: right;
+    @media all and (min-width: 1024px) {
+      display: block !important;
+    }
+    @include breakpoint(tablet) {
+      position: fixed;
+      margin: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: #FFF;
+      z-index: 100;
+      padding-top: 44px;
+      display: none;
+      overflow: auto;
+    }
+    .menu-list {
+      display: none;
+      @include breakpoint(tablet) {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 44px;
+        text-align: center;
+        line-height: 44px;
+        color: #a8a8a8;
+        cursor: pointer;
+        border-left: 1px solid rgba(0,0,0,.15);
+      }
+    }
+    .menu {
+      padding: 0;
+      margin: 0;
+      > li {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        margin-left: 53px;
+        @include breakpoint(tablet) {
+          display: block;
+          margin: 0;
+          border-bottom: 1px solid rgba(0,0,0,.15);
+        }
+        > a {
+          font-weight: 500;
+          color: #000000;
+          text-decoration: none;
+          padding: 0 0 21px 0;
+          display: block;
+          @include breakpoint(tablet) {
+            padding: 12px 28px 11px;
+          }
+        }
+        &.has-child {
+          > a {
+            padding-right: 27px;
+          }
+          &:after {
+            position: absolute;
+            font-family: "FontAwesome", sans-serif;
+            content: "\f078";
+            right: 0;
+
+            top: 2px;
+            color: #a8a8a8;
+            font-size: 12px;
+            @include breakpoint(tablet) {
+              display: none;
+            }
+          }
+        }
+        @media all and (min-width: 1024px) {
+          &:hover {
+            > a {
+              color: $greendark;
+            }
+            .submenu {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .submenu {
+      background: #FFF;
+      margin: 0;
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: -35px;
+      padding: 35px;
+      min-width: 250px;;
+      display: none;
+      @include breakpoint(tablet) {
+        display: block;
+        position: fixed;
+        margin: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #FFF;
+        z-index: 100;
+        padding: 0;
+        transform: translateX(100%);
+        transition: all 0.3s;
+        padding-top: 44px;
+        overflow: auto;
+        &.open {
+          transform: translateX(0);
+        }
+      }
+      @media all and (min-width: 1024px) {
+        &.columns {
+          width: 460px;
+          li {
+            float: left;
+            width: 50%;
+          }
+        }
+      }
+      > li {
+        @include breakpoint(tablet) {
+          border-bottom: 1px solid rgba(0,0,0,.15);
+        }
+        > a {
+          padding: 5px 0;
+          display: block;
+          color: #2a2a2a;
+          font-size: 14px;
+          text-decoration: none;
+          @include breakpoint(tablet) {
+            font-weight: 500;
+            color: #000000;
+            text-decoration: none;
+            display: block;
+            padding: 12px 28px 11px;
+          }
+          &:hover {
+            color: $greendark;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,260 @@
+.contact {
+  &__left {
+    float: left;
+    width: 470/1170*100%;
+    .form-style {
+      padding-top: 20px;
+      @include breakpoint(mobile) {
+        padding-top: 10px;
+      }
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+  &__right {
+    float: right;
+    width: 570/1170*100%;
+    .gmap {
+      height: 580px;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+  .text-page {
+    h2 {
+      font-size: 32px;
+      @include breakpoint(mobile) {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+.form-style {
+  @media screen and (max-width: 575px){ #rc-imageselect, .g-recaptcha {transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;} }
+  form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 39px 0 0 0;
+    .label-input {
+      font-size: 12px;
+      display: block;
+      padding: 0 0 7px 9px;
+    }
+    input:not([type="submit"]):not([type="checbox"]):not([type="radio"]){
+      width: 100%;
+      border: none;
+      height: 40px;
+      font-size: 14px;
+      padding: 0 15px;
+      outline: none;
+      border: 0;
+      background: #f7f7f7;
+      max-width: 270px;
+    }
+    input[type="submit"] {
+      padding: 13px 25px;
+      margin: -8px 0 0 0;
+    }
+    button {
+      line-height: 12px;
+      transition: all 0.3s;
+    }
+    .form-wrap {
+      width: 100%;
+      margin-bottom: 15px;
+      position: relative;
+      .wpcf7-form-control-wrap {
+        position: static;
+      }
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
+      &:not(.checkbox-with-text) {
+        > label {
+          display: block !important;
+          font-size: 14px;
+          font-weight: bold;
+          padding-bottom: 5px;
+          color: #2a2a2a;
+        }
+      }
+
+      p {
+        margin: 0 0;
+      }
+      br {
+        display: none;
+      }
+      &.form-wrap--full {
+        width: 100%;
+      }
+      .wpcf7-not-valid-tip {
+        color: red;
+        font-size: 11px;
+        font-weight: normal;
+        display: block;
+        padding: 8px 5px 0 15px;
+        position: absolute;
+        bottom: -15px;
+      }
+      &.checkbox-with-text {
+        display: flex;
+        width: 100%;
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+        .wpcf7-not-valid-tip {
+          position: absolute;
+          left: 19px;
+          bottom: 0;
+        }
+        .wpcf7-form-control-wrap {
+          &.styled-checkbox {
+            position: static;
+            margin-right: 15px;
+            .wpcf7-form-control-wrap {
+              position: absolute;
+              opacity: 0;
+            }
+            .wpcf7-not-valid-tip {
+              padding-left: 22px;
+            }
+            > label {
+              width: 20px;
+              height: 20px;
+              background: #f7f7f7;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              font-size: 14px;
+              text-align: center;
+              line-height: 25px;
+              position: relative;
+              z-index: 100;
+              i {
+                display: none;
+                color: $green;
+              }
+              &.open {
+                i {
+                  display: block;
+                }
+
+              }
+            }
+            input {
+              opacity: 0;
+              position: absolute;
+              width: 0;
+            }
+          }
+        }
+        label {
+          font-size: 12px;
+          line-height: 16px;
+          color: #344154;
+        }
+        a {
+          color: $green;
+        }
+      }
+      &--double {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include breakpoint(mobileonly) {
+          margin-bottom: 0px;
+        }
+        &--item {
+          width: 45%;
+          @include breakpoint(mobileonly) {
+            width: 100%;
+            margin-bottom: 22px;
+          }
+        }
+      }
+    }
+    textarea {
+      width: 100%;
+      border: none;
+      font-size: 14px;
+      padding: 10px 15px;
+      outline: none;
+      height: 160px;
+      background: #f7f7f7;
+    }
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color:    #2a2a2a;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color:    #2a2a2a;
+      opacity:  1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color:    #2a2a2a;
+      opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color:    #2a2a2a;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color:    #2a2a2a;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  div.wpcf7-response-output {
+    margin: 15px 0;
+    padding: 15px;
+    font-size: 13px;
+    border-radius: 0px;
+    clear: both;
+    width: 100%;
+  }
+
+  div.wpcf7-mail-sent-ok {
+    //border: 2px solid #398f14;
+    border: 2px solid $green;
+    color: $green;
+  }
+
+  div.wpcf7-mail-sent-ng {
+    //border: 2px solid #ff0000;
+    border: 2px solid red;
+    color: red;
+  }
+
+  div.wpcf7-spam-blocked {
+    //border: 2px solid #ffa500;
+    border: 2px solid red;
+    color: red;
+  }
+
+  div.wpcf7-validation-errors {
+    //border: 2px solid #f7e700;
+    border: 2px solid red;
+    color:red;
+  }
+  .button {
+    background: none;
+    border: none;
+    color: $green;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 3px solid $green;
+    text-decoration: none;
+    clear: both;
+    padding: 0 0 10px 0;
+    &:hover {
+      color: $greendark;
+      border-color: $greendark;
+    }
+  }
+}
